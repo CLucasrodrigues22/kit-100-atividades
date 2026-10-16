@@ -413,7 +413,7 @@
 
 <header class="topo">
     <div class="faixa-prazo" id="faixaPrazo" role="status">
-        Oferta por tempo limitado: termina em <strong id="contadorPrazo">15:00</strong><span class="chip-previa" id="previaPrazo">Prévia</span>
+        Oferta por tempo limitado: termina em <strong id="contadorPrazo">15:00</strong>
     </div>
 
     <div class="container">
@@ -1268,7 +1268,6 @@
         const previa = isNaN(fim);
         const alvo = previa ? Date.now() + 15 * 60 * 1000 : fim;
         {
-            if (!previa) document.getElementById("previaPrazo").remove();
             const contador = document.getElementById("contadorPrazo");
             const dois = n => String(n).padStart(2, "0");
             const tick = () => {
